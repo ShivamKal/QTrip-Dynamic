@@ -20,7 +20,6 @@ async function fetchCities() {
   catch(err){
     return null;
   }
-  console.log(res)
   return res;
 }
 

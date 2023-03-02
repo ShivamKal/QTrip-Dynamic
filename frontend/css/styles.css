@@ -262,3 +262,19 @@ input[type="number"] {
   padding: 16px;
   margin-bottom: 30px;
 }
+.custom-row{
+  flex-wrap: wrap;
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+.activity-card{
+  max-width: 250px;
+}
+.activity-card .card-body{
+  min-height: 150px;
+}
+.activity-card img{
+  max-height: 200px;
+  max-width: 100%;
+  min-width: 100%;
+}
