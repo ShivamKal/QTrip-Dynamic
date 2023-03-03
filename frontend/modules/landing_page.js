@@ -2,6 +2,7 @@ import config from "../conf/index.js";
 
 async function init() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   let cities = await fetchCities();
   cities.forEach((key) => {
     addCityToDOM(key.id, key.city, key.description, key.image);
@@ -9,6 +10,8 @@ async function init() {
   // console.log("From init()")
   // console.log(config?.backendEndpoint)
 =======
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
   //Fetches list of all cities along with their images and description
   let cities = await fetchCities();
 
@@ -16,11 +19,15 @@ async function init() {
   cities.forEach((key) => {
     addCityToDOM(key.id, key.city, key.description, key.image);
   });
+<<<<<<< HEAD
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 }
 
 //Implementation of fetch call
 async function fetchCities() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   let res = [];
   try{
@@ -37,12 +44,18 @@ async function fetchCities() {
   // 1. Fetch cities using the Backend API and return the data
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
+  // TODO: MODULE_CITIES
+  // 1. Fetch cities using the Backend API and return the data
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 }
 
 //Implementation of DOM manipulation to add cities
 function addCityToDOM(id, city, description, image) {
   // TODO: MODULE_CITIES
   // 1. Populate the City details and insert those details into the DOM
+<<<<<<< HEAD
 <<<<<<< HEAD
     const ele = document.getElementById("data");
     const anchor = document.createElement("div");
@@ -59,6 +72,9 @@ function addCityToDOM(id, city, description, image) {
     </a>
     `
     ele.appendChild(anchor)
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f

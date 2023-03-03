@@ -10,7 +10,10 @@ body {
 body {
   overflow-y: auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
   min-height: 100vh;
@@ -266,6 +269,7 @@ input[type="number"] {
   margin-bottom: 30px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .custom-row{
   flex-wrap: wrap;
   display: flex;
@@ -282,5 +286,7 @@ input[type="number"] {
   max-width: 100%;
   min-width: 100%;
 }
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f

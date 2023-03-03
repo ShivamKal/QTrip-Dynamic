@@ -6,7 +6,11 @@ function getCityFromURL(search) {
   // TODO: MODULE_ADVENTURES
   // 1. Extract the city id from the URL's Query Param and return it
 <<<<<<< HEAD
+<<<<<<< HEAD
   return search.split("=")[1];
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
@@ -16,6 +20,7 @@ function getCityFromURL(search) {
 async function fetchAdventures(city) {
   // TODO: MODULE_ADVENTURES
   // 1. Fetch adventures using the Backend API and return the data
+<<<<<<< HEAD
 <<<<<<< HEAD
   let res = [];
   try{
@@ -31,12 +36,16 @@ async function fetchAdventures(city) {
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 }
 
 //Implementation of DOM manipulation to add adventures for the given city from list of adventures
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.log(adventures)
   const ele = document.getElementById("data");
@@ -71,6 +80,9 @@ function addAdventureToDOM(adventures) {
     `
     ele.appendChild(anchor)
   })
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
