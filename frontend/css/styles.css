@@ -9,7 +9,10 @@ body {
 
 body {
   overflow-y: auto;
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
   min-height: 100vh;
 }
 textarea:focus,
@@ -262,6 +265,7 @@ input[type="number"] {
   padding: 16px;
   margin-bottom: 30px;
 }
+<<<<<<< HEAD
 .custom-row{
   flex-wrap: wrap;
   display: flex;
@@ -278,3 +282,5 @@ input[type="number"] {
   max-width: 100%;
   min-width: 100%;
 }
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
