@@ -102,7 +102,6 @@ function filterFunction(list, filters) {
 function saveFiltersToLocalStorage(filters) {
   // TODO: MODULE_FILTERS
   // 1. Store the filters as a String to localStorage
-  console.log(typeof(filters), filters)
   var obj = {...getFiltersFromLocalStorage()}
   if(typeof(filters) === "string"){
     obj={
@@ -115,7 +114,7 @@ function saveFiltersToLocalStorage(filters) {
       duration: filters?.duration,
       category : filters?.category
     }
-  
+  }
   console.log(obj)
   filters = obj;
   localStorage.setItem("filters", JSON.stringify(filters))
