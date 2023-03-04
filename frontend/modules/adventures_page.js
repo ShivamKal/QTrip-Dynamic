@@ -144,6 +144,7 @@ function generateFilterPillsAndUpdateDOM(filters) {
       ele.appendChild(anchor)
     })
   }
+
 }
 export {
   getCityFromURL,
