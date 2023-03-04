@@ -121,8 +121,6 @@
             getFiltersFromLocalStorage() !== null
                 ? getFiltersFromLocalStorage()
                 : { duration: "", category: [] };
-
-
         //entry point (executed when DOM is loaded)
         (async function () {
 
@@ -148,7 +146,12 @@
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to show the selected duration filter. Use the provided input event
             // 2. Invoke saveFiltersToLocalStorage here
-
+            const ele = document.getElementById("duration-select");
+            ele.value = event.target.value;
+            
+            console.log("selectDuration -->",filters)
+            saveFiltersToLocalStorage(event.target.value)
+            //console.log(event.target.value.split('-'), ele)
         }
 
         //executed when clear button is clicked on duration filter dropdown
@@ -156,7 +159,9 @@
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to clear the Duration filter. Refer clearCategory() below
             // 2. Invoke saveFiltersToLocalStorage here
-
+            const ele = document.getElementById("duration-select");
+            ele.value = '';
+            saveFiltersToLocalStorage('')
         }
 
 
@@ -168,9 +173,8 @@
 
             let category = event.target.value;
             document.getElementById("category-select").selectedIndex = 0;
-
-            filters["category"].push(category);
-            filters["category"] = filters["category"].filter(onlyUnique);
+            filters["category"]?.push(category);
+            filters["category"] = filters["category"]?.filter(onlyUnique);
 
 
             generateFilterPillsAndUpdateDOM(filters);
@@ -179,6 +183,9 @@
 
             // TODO: MODULE_FILTERS
             // 1. Invoke saveFiltersToLocalStorage here
+            console.log("selectCategory -->", filters)
+            saveFiltersToLocalStorage(filters)
+
         }
 
         //executed when clear button is clicked on category filter dropdown
@@ -192,6 +199,7 @@
 
             // TODO: MODULE_FILTERS
             // 1. Invoke saveFiltersToLocalStorage here
+            saveFiltersToLocalStorage(filters)
         }
 
         //helper function
