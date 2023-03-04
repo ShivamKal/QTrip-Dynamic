@@ -123,7 +123,7 @@
             let adventureId = await getAdventureIdFromURL(window.location.search);
             let adventureDetails = await fetchAdventureDetails(adventureId);
             addAdventureDetailsToDOM(adventureDetails);
-            addBootstrapPhotoGallery(adventureDetails.images);
+            addBootstrapPhotoGallery(adventureDetails?.images);
             conditionalRenderingOfReservationPanel(adventureDetails);
             captureFormSubmit(adventureDetails);
             showBannerIfAlreadyReserved(adventureDetails);
