@@ -249,7 +249,7 @@ describe("Adventure Detail Page Tests", function () {
     document.getElementById("myForm").submit();
 
     // Test if fetch was called
-    // expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     // Test if fetch was called with correct API url
     expect(fetch.mock.calls[0][0]).toEqual(
       expect.stringContaining("/reservations/new")
@@ -264,12 +264,12 @@ describe("Adventure Detail Page Tests", function () {
     );
     // Test if body contains the required fields
     expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty("name");
-    // expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty("date");
-   // expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty("person");
-    // expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty(
-    //   "adventure",
-    //   adventure.id
-    // );
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty("date");
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty("person");
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).toHaveProperty(
+      "adventure",
+      adventure.id
+    );
 
   });
 });

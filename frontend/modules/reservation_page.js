@@ -41,11 +41,12 @@ function addReservationToTable(reservations) {
    const tbody = document.getElementById('reservation-table');
    reservations?.map((res)=> {
        const row = document.createElement("tr")
-       row. setAttribute('id', res?.adventure);
+       //row. setAttribute('id', res?.adventure);
        for(var i = 1;i <=Object.keys(res)?.length; i++) row.appendChild(document.createElement("td"))
        const date = new Date(res?.date)
        const time = new Date(res?.time)
        let children = row?.children
+       children[7].setAttribute("id", res?.id);
        // document.getElementById(res?.id)?.children[0]?.href = `detail/?adventure=${res?.adventure}`
        children[0].innerHTML = `<a href='/workspace/shivam-singh-kaleyra-ME_QTRIPDYNAMIC/frontend/pages/adventures/detail/?adventure=${res?.adventure}'><strong>${res?.id}</strong></a>`
        children[1].innerHTML = res?.name
@@ -54,7 +55,8 @@ function addReservationToTable(reservations) {
        children[4].innerHTML = date.toLocaleDateString("en-IN")
        children[5].innerHTML = res?.price
        children[6].innerHTML = time.toLocaleString("en-IN",{day:"numeric", month: 'long', year: "numeric",  hour: "numeric", minute: "numeric", second: "numeric" }).replace(" at",",")
-       children[7].innerHTML = `<a href='/workspace/shivam-singh-kaleyra-ME_QTRIPDYNAMIC/frontend/pages/adventures/detail/?adventure=${res?.adventure}' class="reservation-visit-button text-white">Visit Adventure</a>`
+       children[7].innerHTML = `<a class="reservation-visit-button text-white">Visit Adventure</a>`
+       children[7].children[0].href =`detail/?adventure=${res?.adventure}`
        tbody?.appendChild(row);
    })
  }

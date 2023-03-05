@@ -118,23 +118,18 @@ function captureFormSubmit(adventure) {
 try{
   fetch(`${config?.backendEndpoint}/reservations/new`, {
     method: 'POST',
-    headers: {
-    'Content-Type': 'application/json',
-    },
+    headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(adventure),
     }
   )
-  
   // Converting to JSON
   .then(response => response.json())
-  
   // Displaying results to console
   .then(json => {
     alert("Success!")
     location.reload();
     // console.log(json)
   });
-
 }
 catch(err){
     alert("Failed!")
