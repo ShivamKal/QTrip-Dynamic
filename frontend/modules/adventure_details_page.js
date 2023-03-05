@@ -120,7 +120,6 @@ function captureFormSubmit(adventure) {
      person:myForm.elements["person"].value,
      adventure:adventure["id"]
    }
-   console.log(data);
    try{
      const url=`${config.backendEndpoint}/reservations/new`;
      const res=await fetch(url,{
